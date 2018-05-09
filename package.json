@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "dev": "next",
-    "lint": "eslint components pages lib server"
+    "lint": "eslint components pages lib server",
+    "dev-express": "nodemon server/app.js --watch server --exec babel-node"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
@@ -16,7 +17,7 @@
     "express-session": "^1.15.6",
     "material-ui": "1.0.0-beta.41",
     "mongoose": "^5.0.0-rc0",
-    "next": "^5.1.0",
+    "next": "^6.0.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

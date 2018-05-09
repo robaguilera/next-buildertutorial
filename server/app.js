@@ -12,12 +12,13 @@ app.prepare().then(() => {
   const server = express();
 
   server.get('/', (req, res) => {
-    // res.send('My express server');
+    const user = { email: 'team@bb.org' };
+    app.render(req, res, '/', { user });
   });
 
   server.get('*', (req, res) => handle(req, res));
 
-  server.listen(port, err => {
+  server.listen(port, (err) => {
     if (err) throw err;
     console.log(`> Ready on ${ROOT_URL}`); // eslint-disable-line no-console
   });

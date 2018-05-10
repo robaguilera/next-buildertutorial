@@ -3,27 +3,28 @@ module.exports = {
   extends: 'airbnb',
   env: {
     browser: true,
-    jest: true,
+    jest: true
   },
   plugins: ['react', 'jsx-a11y', 'import'],
   rules: {
     'max-len': ['error', 100],
     'no-underscore-dangle': ['error', { allow: ['_id'] }],
+    'comma-dangle': false,
     'prefer-destructuring': [
       'error',
       {
         VariableDeclarator: {
           array: false,
-          object: true,
+          object: true
         },
         AssignmentExpression: {
           array: true,
-          object: false,
-        },
+          object: false
+        }
       },
       {
-        enforceForRenamedProperties: false,
-      },
+        enforceForRenamedProperties: false
+      }
     ],
     'import/prefer-default-export': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
@@ -31,8 +32,8 @@ module.exports = {
     'react/jsx-filename-extension': [
       'error',
       {
-        extensions: ['.js'],
-      },
-    ],
-  },
+        extensions: ['.js']
+      }
+    ]
+  }
 };
